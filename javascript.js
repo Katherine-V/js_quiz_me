@@ -10,9 +10,9 @@ document.getElementById("ques1").innerHTML="click!";
 //.addEventListener(click, function())
 
 var questions=[ title, choices, answer]
-var currentQuestion
 var quiz-questions=[//array of questions or at least numbers]
 
+var currentQuestion
 for (var i=0; i<5; i++)
     console.log(quiz-questions[i])
 
