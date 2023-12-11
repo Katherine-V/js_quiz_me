@@ -40,3 +40,14 @@ body {
     display: inline-block;
     margin-left: 25px;
 }
+
+body {
+      font-family: Arial, sans-serif;
+    }
+#quiz-container {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+.question {
+      margin-bottom: 10px;
+    }
