@@ -1,13 +1,9 @@
-//array can include question and answer options
 //click start and timer begins
 //question appears
 //click answer && correct && new question || incorrect and lose 15 seconds time
 //no new questions || time runs out = game over
 //option to save initials and score
 
-
-document.getElementById("ques1").innerHTML="click!";
-//.addEventListener(click, function())
 
 var questions=[ title, choices, answer]
 var quiz-questions=[//array of questions or at least numbers]
@@ -20,23 +16,54 @@ for (var i=0; i<5; i++)
 var highscores= JSON.parse(window.localStorage).getitem("highscores")
 
 
-  <script>
-    const questions = [
+document.getElementById("ques1").innerHTML="click!";
+//.addEventListener(click, function())
+
+var questions = [
       {
-        question: "What is the capital of France?",
-        options: ["Paris", "London", "Berlin", "Madrid"],
-        correctAnswer: "Paris"
+        question: "Arrays in JavaScript are defined by which of the following statements?",
+
+        options: ["A) It is an ordered list of values", "B) It is an ordered list of objects", "C) It is an ordered list of strings", 
+                  "D) It is an ordered list of functions"],
+        correctAnswer: "A"
       },
       {
-        question: "What is the largest planet in our solar system?",
-        options: ["Earth", "Jupiter", "Mars", "Venus"],
-        correctAnswer: "Jupiter"
+        question: "Which of the following objects is the main entry point to all client-side JavaScript features and APIs?",
+            
+        options: ["A) Position", "B) Window", "C) Standard", "D) Location"],
+
+        correctAnswer: "B"  
       },
-      // Add more questions as needed
-    ];
+      {
+        question: "What is the basic difference between JavaScript and Java?",
+          
+        options: "A) Functions are considered as fields", "B) Functions are values, and there is no hard distinction between methods and fields",
+"C) Variables are specific", "D) There is no difference"
+     
+        correctAnswer: "B"
+      }
+      {
+        question: "Which of the following is not an error in JavaScript?"
+        
+        options: "A) Missing of Bracket", "B) Division by zero", "C) Syntax error", "D) Missing of semicolons"
+        
+        correctAnswer: "B"
+      }
+      {
+        question: "Which of the following is the ultimate element selection method?"
+        
+        options: ["A) querySelectorAll()","B) querySelector(), "C) queryAll()", "D) query()"     
+        
+        correctAnswer: "A"
+      }
+
+     ];
+
+document.getElementById("ques1").innerHTML="click!";
+//.addEventListener(click, function())
 
     let currentQuestionIndex = 0;
-    let timer = 60;
+    let timer = 75;
 
     function startQuiz() {
       displayQuestion();
