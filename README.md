@@ -2,9 +2,6 @@
 
 ## Interactive Timed Quiz on JavaScript
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+In order to test my understanding of basic questions regarding Javascript, a quiz was designed.
+The quiz was built in order to gain practice writing Javascript as well as studying it.
+I learned that I should not put off the opportunities I have to learn.
