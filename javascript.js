@@ -4,20 +4,11 @@
 //no new questions || time runs out = game over
 //option to save initials and score
 
-
-var questions=[ title, choices, answer]
-var quiz-questions=[//array of questions or at least numbers]
-
 var currentQuestion
 for (var i=0; i<5; i++)
     console.log(quiz-questions[i])
 
-
 var highscores= JSON.parse(window.localStorage).getitem("highscores")
-
-
-document.getElementById("ques1").innerHTML="click!";
-//.addEventListener(click, function())
 
 var questions = [
       {
@@ -37,22 +28,21 @@ var questions = [
       {
         question: "What is the basic difference between JavaScript and Java?",
           
-        options: "A) Functions are considered as fields", "B) Functions are values, and there is no hard distinction between methods and fields",
-"C) Variables are specific", "D) There is no difference"
-     
+        options: ["A) Functions are considered as fields", "B) Functions are values, and there is no hard distinction between methods and fields",
+        "C) Variables are specific", "D) There is no difference"],     
         correctAnswer: "B"
-      }
+      },
       {
-        question: "Which of the following is not an error in JavaScript?"
+        question: "Which of the following is not an error in JavaScript?",
         
-        options: "A) Missing of Bracket", "B) Division by zero", "C) Syntax error", "D) Missing of semicolons"
+        options: ["A) Missing of Bracket", "B) Division by zero", "C) Syntax error", "D) Missing of semicolons"],
         
         correctAnswer: "B"
-      }
+      },
       {
-        question: "Which of the following is the ultimate element selection method?"
+        question: "Which of the following is the ultimate element selection method?",
         
-        options: ["A) querySelectorAll()","B) querySelector(), "C) queryAll()", "D) query()"     
+        options: ["A) querySelectorAll()","B) querySelector(), "C) queryAll()", "D) query()"],  
         
         correctAnswer: "A"
       }
@@ -60,35 +50,34 @@ var questions = [
      ];
 
 document.getElementById("ques1").innerHTML="click!";
-//.addEventListener(click, function())
+.addEventListener(click, function())
 
-    let currentQuestionIndex = 0;
-    let timer = 75;
+let currentQuestionIndex = 0;
+let timer = 75;
 
-    function startQuiz() {
-      displayQuestion();
-      setInterval(updateTimer, 1000);
+function startQuiz() {
+  displayQuestion();
+    setInterval(updateTimer, 1000);
     }
 
-    function displayQuestion() {
-      const currentQuestion = questions[currentQuestionIndex];
+function displayQuestion() {
+  const currentQuestion = questions[currentQuestionIndex];
       document.getElementById('question-container').innerHTML = currentQuestion.question;
       document.getElementById('options-container').innerHTML = currentQuestion.options.map(option =>
-        `<input type="radio" name="answer" value="${option}"> ${option}<br>`
-      ).join('');
+//        `<input type="radio" name="answer" value="${option}"> ${option}<br>`
+//      ).join('');
     }
 
-    function updateTimer() {
-      timer--;
-      document.getElementById('time').textContent = timer;
+function updateTimer() {
+  timer--;
+    document.getElementById('time').textContent = timer;
       if (timer === 0) {
-        alert("Time's up! Quiz Over.");
-        // Add code for handling end of quiz
+      alert("Time's up! Quiz Over.");
       }
     }
 
-    function nextQuestion() {
-      const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+function nextQuestion() {
+  const selectedAnswer = document.querySelector('input[name="answer"]:checked');
 
       if (selectedAnswer) {
         if (selectedAnswer.value === questions[currentQuestionIndex].correctAnswer) {
@@ -102,12 +91,9 @@ document.getElementById("ques1").innerHTML="click!";
           displayQuestion();
         } else {
           alert("Quiz Over!");
-          // Add code for handling end of quiz
-        }
-      } else {
+        } else {
         alert("Please select an answer!");
       }
     }
 
     startQuiz();
-  </script>
